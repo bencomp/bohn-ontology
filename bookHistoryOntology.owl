@@ -1,0 +1,1138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://digitalScholarship.nl/bookHistoryOntology#"
+     xml:base="http://digitalScholarship.nl/bookHistoryOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bookHistoryOntology="http://digitalScholarship.nl/bookHistoryOntology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://digitalScholarship.nl/bookHistoryOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation1 -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation1">
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation2 -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation2">
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publisher"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Expression.Manifestation -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Expression.Manifestation">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Expression.Manifestation"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Expression.Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Manifestation.Item -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Manifestation.Item">
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Manifestation.Item"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Manifestation.Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.WORK.Expression -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.WORK.Expression">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.WORK.Expression"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.WORK.Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.is_the_author_of -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.is_the_author_of">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Attributed_Work -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Attributed_Work">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Author -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Author">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#INV.memberOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Mediation1"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Mediation2"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Attributed_Work"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Author"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Mediation1 -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Mediation1">
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation1"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Mediation2 -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Mediation2">
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation2"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publisher"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Expression.Manifestation -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Expression.Manifestation">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Manifestation.Item -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Manifestation.Item">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.WORK.Expression -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.WORK.Expression">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <rdfs:subPropertyOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#is_the_author_of -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#is_the_author_of">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.is_the_author_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Attributed_Work -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Attributed_Work">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Attributed_Work"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Author -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Author">
+        <rdfs:range rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+        <owl:inverseOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Author"/>
+        <owl:propertyDisjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#memberOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Expression.note -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Expression.note">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Expression.title -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Expression.title">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.edition -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.edition">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.format -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.format">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrency">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrencyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrencyValue">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasPublicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasPublicationYear">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.note -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.note">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.printRun -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.printRun">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation.subject -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.subject">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Name.Name -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Name.Name">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Name.hasBeginning -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Name.hasBeginning">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#PERSON.firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PERSON.firstName">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#PERSON.givenName -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PERSON.givenName">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#PERSON.note -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PERSON.note">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#WORK.subject -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#WORK.subject">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasAddress">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasBeginning -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasBeginning">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasLocality -->
+
+    <owl:DatatypeProperty rdf:about="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasLocality">
+        <rdfs:domain rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#HTML"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Copy"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Copy"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Anonymous_Work -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Anonymous_Work">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.is_the_author_of"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Attributed_Work"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Author -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Author">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Collective_Author"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Individual_Author"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.mediation.Authorship.Author"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#is_the_author_of"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Authorship -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Authorship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Author"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Attributed_Work"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Corporate_Body"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Kind1"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Collective_Author -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Collective_Author">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Corporate_Body"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Individual_Author"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Corporate_Body -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Corporate_Body">
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Kind1"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PDF"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Dissertation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Dissertation">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Expression -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Expression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Expression.Manifestation"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.WORK.Expression"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression.note"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression.title"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Kind1"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#HTML -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#HTML">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation"/>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Hardback_Copy -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Copy">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Hardback_Manifestation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Manifestation">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Individual_Author -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Individual_Author">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Item -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Item">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Manifestation.Item"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Kind1"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Kind1 -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Kind1">
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Manifestation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Manifestation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#_Manifestation_Collection"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Manifestation"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Manifestation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.Manifestation.Item"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Item"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation1"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.embodimentOf.Expression.Manifestation"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.edition"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.format"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrency"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasCurrencyValue"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.hasPublicationYear"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.note"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.printRun"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation.subject"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Name -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Name">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name.Name"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Name.hasBeginning"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Oration -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Oration">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#PDF -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PDF">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PDF"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#PERSON -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#PERSON">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON.firstName"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON.givenName"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#PERSON.note"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Paperback_Manifestation -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Manifestation">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Publication -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Publication">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Mediation1"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Mediation2"/>
+                        <owl:onClass rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publisher"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK"/>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#Publisher -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Publisher">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#INV.Mediation2"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Publication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Corporate_Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#WORK -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#WORK">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Anonymous_Work"/>
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#embodimentOf.WORK.Expression"/>
+                        <owl:someValuesFrom rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Expression"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#WORK.subject"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#_Manifestation_Collection -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#_Manifestation_Collection">
+        <rdfs:subClassOf rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalScholarship.nl/bookHistoryOntology#hasLocality -->
+
+    <owl:Class rdf:about="http://digitalScholarship.nl/bookHistoryOntology#hasLocality">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasAddress"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasBeginning"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#hasLocality.hasLocality"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Analog_Manifestation"/>
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Digital_Manifestation"/>
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#_Manifestation_Collection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#HTML"/>
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Hardback_Copy"/>
+            <rdf:Description rdf:about="http://digitalScholarship.nl/bookHistoryOntology#Paperback_Copy"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <swrl:Variable rdf:about="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+    <swrl:Variable rdf:about="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+    <swrl:Variable rdf:about="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest>
+                            <swrl:AtomList>
+                                <rdf:first>
+                                    <swrl:ClassAtom>
+                                        <swrl:classPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Authorship"/>
+                                        <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+                                    </swrl:ClassAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <swrl:AtomList>
+                                        <rdf:rest>
+                                            <swrl:AtomList>
+                                                <rdf:rest>
+                                                    <swrl:AtomList>
+                                                        <rdf:first>
+                                                            <swrl:DifferentIndividualsAtom>
+                                                                <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+                                                                <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+                                                            </swrl:DifferentIndividualsAtom>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <swrl:AtomList>
+                                                                <rdf:first>
+                                                                    <swrl:DifferentIndividualsAtom>
+                                                                        <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+                                                                        <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+                                                                    </swrl:DifferentIndividualsAtom>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <swrl:AtomList>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                        <rdf:first>
+                                                                            <swrl:DifferentIndividualsAtom>
+                                                                                <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+                                                                                <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+                                                                            </swrl:DifferentIndividualsAtom>
+                                                                        </rdf:first>
+                                                                    </swrl:AtomList>
+                                                                </rdf:rest>
+                                                            </swrl:AtomList>
+                                                        </rdf:rest>
+                                                    </swrl:AtomList>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Author"/>
+                                                        <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+                                                        <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+                                                    </swrl:IndividualPropertyAtom>
+                                                </rdf:first>
+                                            </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#mediation.Authorship.Attributed_Work"/>
+                                                <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+                                                <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#z"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                    </swrl:AtomList>
+                                </rdf:rest>
+                            </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                            <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Author"/>
+                                <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+                            </swrl:ClassAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#Attributed_Work"/>
+                        <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#is_the_author_of"/>
+                        <swrl:argument1 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#x"/>
+                        <swrl:argument2 rdf:resource="http://digitalScholarship.nl/bookHistoryOntology#y"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version [Not Released]) http://owlapi.sourceforge.net -->
+
