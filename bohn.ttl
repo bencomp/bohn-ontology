@@ -1,0 +1,7 @@
+@prefix bohn: <https://digitalscholarship.nl/ns/bohn.ttl#>
+@prefix dct: 
+@prefix fabio: 
+@prefix foaf: 
+
+bohn:ontology a owl:Ontology;
+	
